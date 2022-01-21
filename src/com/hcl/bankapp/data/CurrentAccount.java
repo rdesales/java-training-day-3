@@ -3,9 +3,11 @@ package com.hcl.bankapp.data;
 public class CurrentAccount extends Account {
 	
 	private static double minimumBalance;
+	private static double interestRate;
 	
 	static {
 		minimumBalance = 200;
+		interestRate = 7;
 	}
 	
 	/**
@@ -25,26 +27,20 @@ public class CurrentAccount extends Account {
 	public double getMinimumBalance() {
 		return minimumBalance;
 	}
-	
-	@Override
-	public void doTransactionIn(double in) {
-		updateAmount(in);
-		System.out.println("Operation -deposit- done.");
+
+	/**
+	 * @return the interestRate
+	 */
+	public static double getInterestRate() {
+		return interestRate;
 	}
-	
-	@Override
-	public void doTransactionOut(double out) {
-		if(amount >= out) {
-			if (amount-out < minimumBalance) {
-				System.out.println("Minimum balance violated. Operation aborted");
-				return;
-			}
-			updateAmount(-1*out);
-			System.out.println("Operation -withdrall- done.");
-		} else {
-			System.out.println("You don't have sufficient founds.");
-		}
-	} 
+
+	/**
+	 * @param interestRate the interestRate to set
+	 */
+	public static void setInterestRate(double interestRate) {
+		CurrentAccount.interestRate = interestRate;
+	}
 
 	@Override
 	public String toString() {

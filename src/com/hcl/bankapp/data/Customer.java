@@ -53,22 +53,49 @@ public class Customer extends Person{
 	 */
 	public void setAccounts(ArrayList<Account> accounts) {
 		this.accounts = accounts;
+	}
+
+	/**
+	 * @return the mobileNumber
+	 */
+	public int getMobileNumber() {
+		return mobileNumber;
+	}
+
+	/**
+	 * @param mobileNumber the mobileNumber to set
+	 */
+	public void setMobileNumber(int mobileNumber) {
+		this.mobileNumber = mobileNumber;
+	}
+
+	/**
+	 * @return the email
+	 */
+	public String getEmail() {
+		return email;
+	}
+
+	/**
+	 * @param email the email to set
+	 */
+	public void setEmail(String email) {
+		this.email = email;
+	}
+
+	/**
+	 * @return the transactions
+	 */
+	public ArrayList<Transaction> getTransactions() {
+		return transactions;
+	}
+
+	/**
+	 * @param transactions the transactions to set
+	 */
+	public void setTransactions(ArrayList<Transaction> transactions) {
+		this.transactions = transactions;
 	} 
-	
-	/**
-	 * Add a new account to the lists of accounts
-	 * @param account
-	 */
-	public void addAccount(Account account) {
-		accounts.add(account);
-	}
-	
-	/**
-	 * Remove the account from the list of the accounts
-	 * @param account
-	 */
-	public void deleteAccount(Account account) {
-		accounts.remove(account);
-	}
+
 	
 }

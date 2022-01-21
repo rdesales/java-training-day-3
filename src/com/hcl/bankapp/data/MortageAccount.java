@@ -18,46 +18,62 @@ public class MortageAccount extends Account {
 		this.expectedFinishDate = expectedFinishDate;
 	}
 
+
+	
+	/**
+	 * @return the monthlyPayment
+	 */
 	public double getMonthlyPayment() {
 		return monthlyPayment;
 	}
 
+
+
+	/**
+	 * @param monthlyPayment the monthlyPayment to set
+	 */
 	public void setMonthlyPayment(double monthlyPayment) {
 		this.monthlyPayment = monthlyPayment;
 	}
 
+
+
+	/**
+	 * @return the expectedFinishDate
+	 */
 	public Date getExpectedFinishDate() {
 		return expectedFinishDate;
 	}
 
+
+
+	/**
+	 * @param expectedFinishDate the expectedFinishDate to set
+	 */
 	public void setExpectedFinishDate(Date expectedFinishDate) {
 		this.expectedFinishDate = expectedFinishDate;
 	}
 
+
+
+	/**
+	 * @return the currentAnnualInterestRate
+	 */
 	public static double getCurrentAnnualInterestRate() {
 		return currentAnnualInterestRate;
 	}
 
+
+
+	/**
+	 * @param currentAnnualInterestRate the currentAnnualInterestRate to set
+	 */
 	public static void setCurrentAnnualInterestRate(double currentAnnualInterestRate) {
 		MortageAccount.currentAnnualInterestRate = currentAnnualInterestRate;
 	}
 
-	@Override
-	public void doTransactionIn(double in) {
-		if(in < monthlyPayment) {
-			System.out.println("Not sufficient funds to pay the montly payment.");
-		} else {
-			this.amount -= in;
-			System.out.println("Monthly payment done");
-		} 
-	}
-	
-	@Override
-	public void doTransactionOut(double out) {
-		updateAmount(25);
-		System.out.println("Due to missing of payment, the new value of this mortage is: $"+this.amount);
-	}  
-	
+
+
 	@Override
 	public String toString() {
 		String out = "";

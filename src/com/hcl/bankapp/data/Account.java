@@ -4,7 +4,7 @@ public abstract class Account {
 
 	protected String id;
 	protected Customer customer;
-	protected double amount;
+	protected double balance;
 	
 	/**
 	 * Constructor
@@ -12,10 +12,10 @@ public abstract class Account {
 	 * @param client Owner of the account
 	 * @param amount Value of the account
 	 */
-	public Account(String id, Customer customer, double amount) {
+	public Account(String id, Customer customer, double balance) {
 		this.id = id;
 		this.customer = customer;
-		this.amount = amount;
+		this.balance = balance;
 	}
 	
 	/**
@@ -38,7 +38,7 @@ public abstract class Account {
 	 * Returns the owner of the account
 	 * @return client
 	 */
-	public Customer getClient() {
+	public Customer getCustomer() {
 		return customer;
 	}
 	
@@ -46,7 +46,7 @@ public abstract class Account {
 	 * Modifies the owner of the account
 	 * @param client The new owner of the account
 	 */
-	public void setClient(Customer client) {
+	public void setCustomer(Customer client) {
 		this.customer = client;
 	}
 	
@@ -54,24 +54,16 @@ public abstract class Account {
 	 * Returns the value of the account
 	 * @return amount
 	 */
-	public double getAmount() {
-		return amount;
+	public double getBalance() {
+		return balance;
 	}
 	
 	/**
 	 * Modifies the value of the account
 	 * @param amount
 	 */
-	public void setAmount(double amount) {
-		this.amount = amount;
-	}
-	
-	/**
-	 * Updates the amount of the account
-	 * @param amount
-	 */
-	public void updateAmount(double update) {
-		amount += update; //This value can be a negative number
+	public void setBalance(double balance) {
+		this.balance = balance;
 	}
 	
 	/**
@@ -81,11 +73,9 @@ public abstract class Account {
 		String out = "";
 		out += "ID account: " + id + "\n";
 		out += "Client: \n" + customer + "\n";
-		out += "Account balance: " + amount + "\n";
+		out += "Account balance: " + balance + "\n";
 		return out;
 	}
 	
-	public abstract void doTransactionIn(double in);
-	public abstract void doTransactionOut(double out);
 	
 }
