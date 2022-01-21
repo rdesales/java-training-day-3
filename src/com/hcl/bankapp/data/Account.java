@@ -6,6 +6,11 @@ public abstract class Account {
 	protected Customer customer;
 	protected double balance;
 	
+	
+	/**
+	 * Constructor without parameters
+	 */
+	public Account() {}
 	/**
 	 * Constructor
 	 * @param id Id of the account
