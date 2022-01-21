@@ -1,9 +1,9 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 public abstract class Account {
 
 	protected String id;
-	protected Client client;
+	protected Customer customer;
 	protected double amount;
 	
 	/**
@@ -12,9 +12,9 @@ public abstract class Account {
 	 * @param client Owner of the account
 	 * @param amount Value of the account
 	 */
-	public Account(String id, Client client, double amount) {
+	public Account(String id, Customer customer, double amount) {
 		this.id = id;
-		this.client = client;
+		this.customer = customer;
 		this.amount = amount;
 	}
 	
@@ -38,16 +38,16 @@ public abstract class Account {
 	 * Returns the owner of the account
 	 * @return client
 	 */
-	public Client getClient() {
-		return client;
+	public Customer getClient() {
+		return customer;
 	}
 	
 	/**
 	 * Modifies the owner of the account
 	 * @param client The new owner of the account
 	 */
-	public void setClient(Client client) {
-		this.client = client;
+	public void setClient(Customer client) {
+		this.customer = client;
 	}
 	
 	/**
@@ -80,7 +80,7 @@ public abstract class Account {
 	public String toString() {
 		String out = "";
 		out += "ID account: " + id + "\n";
-		out += "Client: \n" + client + "\n";
+		out += "Client: \n" + customer + "\n";
 		out += "Account balance: " + amount + "\n";
 		return out;
 	}

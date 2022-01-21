@@ -1,4 +1,4 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 public class CurrentAccount extends Account {
 	
@@ -14,7 +14,7 @@ public class CurrentAccount extends Account {
 	 * @param client Owner of the account
 	 * @param amount value of the account
 	 */
-	public CurrentAccount(String id, Client client, double amount){
+	public CurrentAccount(String id, Customer client, double amount){
 		super(id, client, amount);
 	}
 	

@@ -1,4 +1,4 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 public class SavingAccount extends Account {
 	
@@ -17,8 +17,8 @@ public class SavingAccount extends Account {
 	 * @param minimumBalance Minimum balance that the
 	 * @param availableTransactions
 	 */
-	public SavingAccount(String id, Client client, double amount, int minimumBalance, int availableTransactions) {
-		super(id, client, amount);
+	public SavingAccount(String id, Customer customer, double amount, int minimumBalance, int availableTransactions) {
+		super(id, customer, amount);
 		this.availableTransactions = availableTransactions;
 	}
 

@@ -1,11 +1,14 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 import java.util.ArrayList;
 
-public class Client extends Person{
+public class Customer extends Person{
 	
 	private String id;
+	private int mobileNumber;
+	private String email;
 	private ArrayList<Account> accounts;
+	private ArrayList<Transaction> transactions;
 
 	/**
 	 * Constructor
@@ -14,7 +17,7 @@ public class Client extends Person{
 	 * @param id ID of the client
 	 * @param accounts The (possible) accounts of the client
 	 */
-	public Client(String name, int age, String id, ArrayList<Account> accounts) {
+	public Customer(String name, int age, String id, ArrayList<Account> accounts) {
 		super(name, age);
 		this.id = id;
 		this.accounts = accounts;

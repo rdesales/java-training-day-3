@@ -1,4 +1,4 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 public class Employee extends Person{
 	

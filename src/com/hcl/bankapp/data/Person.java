@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 import java.util.Objects;
 

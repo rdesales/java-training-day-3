@@ -1,4 +1,4 @@
-package com.hcl.bankapp;
+package com.hcl.bankapp.data;
 
 import java.util.Date;
 
@@ -12,8 +12,8 @@ public class MortageAccount extends Account {
 		currentAnnualInterestRate = 13.5;
 	}
 	
-	public MortageAccount(String id, Client client, double amount, double monthlyPayment, Date expectedFinishDate ) {
-		super(id, client, amount);
+	public MortageAccount(String id, Customer customer, double amount, double monthlyPayment, Date expectedFinishDate ) {
+		super(id, customer, amount);
 		this.monthlyPayment = monthlyPayment;
 		this.expectedFinishDate = expectedFinishDate;
 	}
