@@ -21,7 +21,10 @@ public class AccountService {
 	 */
 	public void checkBalance(String id) {
 		Account a = adao.findOne(id);
-		System.out.println("Balance of account " + id + ": $"+a.getBalance());
+		if(a  != null)
+			System.out.println("Balance of account " + id + ": $"+a.getBalance());
+		else
+			System.out.println("Account not found! :O");
 	}
 	
 	/**
@@ -30,9 +33,13 @@ public class AccountService {
 	 */
 	public void updateBalance(String id, double amount) {
 		Account a = adao.findOne(id);
-		a.setBalance(a.getBalance()+amount);
-		adao.update(a);
-		System.out.println("Balance updated.\n Current balance: $"+a.getBalance());
+		if(a == null)
+			System.out.println("Account not found! :0");
+		else {
+			a.setBalance(a.getBalance()+amount);
+			adao.update(a);
+			System.out.println("Balance updated.\n Current balance: $"+a.getBalance());
+		}
 	}
 
 }
