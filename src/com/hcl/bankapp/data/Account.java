@@ -77,5 +77,14 @@ public abstract class Account {
 		return out;
 	}
 	
+	/**
+	 * Equals method
+	 * @param a 
+	 * @return a boolean value 
+	 */
+	public boolean equals(Account a) {
+		return id.equals(a.getId());
+	}
+	
 	
 }

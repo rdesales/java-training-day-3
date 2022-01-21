@@ -1,5 +1,5 @@
 package com.hcl.bankapp.dao;
 
-public class TransactionDao {
+public class TransactionDAO {
 
 }
