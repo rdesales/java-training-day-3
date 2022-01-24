@@ -25,7 +25,7 @@ public class TransactionService {
 	 * @param cdao
 	 * @param tdao
 	 */
-	public TransactionService(AccountDAO ada, TransactionDAO tdao) {
+	public TransactionService(AccountDAO adao, TransactionDAO tdao) {
 		this.adao = adao;
 		//this.cdao = cdao;
 		this.tdao = tdao;
