@@ -2,12 +2,37 @@ package com.hcl.bankapp.service;
 
 import java.util.Scanner;
 
-public class CustomerService {
+import com.hcl.bankapp.dao.AccountDAO;
+import com.hcl.bankapp.dao.CustomerDAO;
 
-	public static boolean login() {
-		boolean flag = false;
-		Scanner scanner = new Scanner(System.in);
+public class CustomerService {
+	
+	
+	private CustomerDAO cdao;
+	private AccountDAO adao;
+
+	
+	/**
+	 * 
+	 * @param idCustomer
+	 * @return
+	 */
+	public boolean login(String idCustomer) {
+		if(adao.findOne(idCustomer) != null)
+			return true;
+		return false;
 		
-		return flag;
 	}
+	
+	public void createCustomerAccount() {
+		System.out.println("Let's create a new account. ");
+		
+	}
+	
+	
+	
+	
+
+	
+	
 }

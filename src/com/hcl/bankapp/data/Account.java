@@ -7,10 +7,7 @@ public abstract class Account {
 	protected double balance;
 	
 	
-	/**
-	 * Constructor without parameters
-	 */
-	public Account() {}
+
 	/**
 	 * Constructor
 	 * @param id Id of the account
